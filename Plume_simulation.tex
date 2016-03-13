@@ -65,11 +65,11 @@
 %	TITLE SECTION 
 %----------------------------------------------------------------------------------------
 
-\title{A two phases three dimensional volcanic plume model with SPH Method} % Poster title
+\title{A Numerical Simulation of Volcanic Plume Using SPH Method} % Poster title
 
 \author{Zhixuan Cao, Abani Patra} % Author(s)
 
-\institute{Department Aerospace and Mechinical Engineering, University at Buffalo, SUNY} % Institution(s)
+\institute{Department of Aerospace and Mechinical Engineering, University at Buffalo, SUNY} % Institution(s)
 
 %----------------------------------------------------------------------------------------
 
@@ -95,10 +95,10 @@
 
 \begin{alertblock}{Abstract}
 \begin{itemize}
-\item \textbf{First Law Based Model} Employ a three dimensional, two phases, transient model based on basic physics laws.\
-\item \textbf{More Suitable Numerical Tools} SPH is more suitable for geophysics flow: Automatically capture boundary of free boundary flow, treating of multiple phase flow is trival for SPH, adding of new physics requires much less coding effort.\
-\item \textbf{Utilize the power of paralle computing} timeliness, more comprehensive model and finer resolution are desired for prediction capacity of simulation models, power of parallel computing will help to achieve this goal.
-\item \textbf{Goal} This model is targetted at but not limited to providing source terms for VATDMs (Volcanic Ash Transport and Dispersal Models).
+\item \textbf{Physics Model} Employ a three dimensional, two phases, transient model based on basic physics laws.\
+\item \textbf{Numerical Tools} SPH is suitable for geophysics flow for several reasons: 1) SPH can capture boundary of free boundary flow automatically, 2) treating of multiple phase flow is trival for SPH, 3) adding of new physics requires much less coding effort.\
+\item \textbf{Parallel Computing} timeliness and more comprehensive model and finer resolution are conflict demands for prediction capability of numerical simulation, distributed memory parallel computing is adopted.
+\item \textbf{Goal} This model is targetting at but not limited to providing source terms for VATDMs (Volcanic Ash Transport and Dispersal Models).
 \end{itemize}
 \end{alertblock}
 
@@ -183,7 +183,7 @@ R_t=\sum_b m_b \dfrac{\varepsilon}{2} \dfrac{\textbf{v}_{ab} \cdot \textbf{v}_{a
 \begin{figure}
 \centering
 {\includegraphics[scale=0.85]{effect_of_turb_model}}
-\caption{Simulation results at t=200. When turbulence model is not included, the entrainment is too less that plume will stop raising up after initial momentum exhuasted.}
+\caption{Simulation results at t=200. When turbulence model is not included (left figure), the entrainment of air is obviously too less that plume will stop raising up after its initial momentum exhuasted.}
 \label{fig:effect_of_turbulence}
 \end{figure}
 
@@ -210,7 +210,7 @@ R_t=\sum_b m_b \dfrac{\varepsilon}{2} \dfrac{\textbf{v}_{ab} \cdot \textbf{v}_{a
 \begin{figure}
 \centering
 {\includegraphics[height= 0.690\linewidth]{jpue_conc}}
-\caption{Jet or plume which is ejected from a nozzle into a uniform environment(JPUE) can be viewed as a simplified volcanic plume. Simulation results of JPUE is compared with experimental resutls \cite{papanicolaou1988investigations, george1977turbulence} in this figure. Concetration distribution across the cross-section is fit into a Gaussion profile (solid line) even though there is no priori reason. D is the diameter of vent, $c_0$ is concetration at the vent.}
+\caption{Jet or plume which is ejected from a nozzle into a uniform environment(JPUE) can be viewed as a simplified volcanic plume. Simulation results of JPUE is compared with experimental resutls \cite{papanicolaou1988investigations, george1977turbulence} for verification purpose. Concetration distribution across the cross-section is fit into a Gaussion profile (solid line) even though there is no priori reason. D is the diameter of vent, $c_0$ is concetration at the vent.}
 \end{figure}
 
 \end{block}
@@ -259,7 +259,7 @@ R_t=\sum_b m_b \dfrac{\varepsilon}{2} \dfrac{\textbf{v}_{ab} \cdot \textbf{v}_{a
 \begin{figure}
 \centering
 {\includegraphics[scale=0.90]{plume_grow_up}}
-\caption{Evolution of plume with time. After around 300 seconds, this plume reaches its top height and start expanding}
+\caption{Evolution of plume with time. After around 300 seconds, the plume reaches its top height and start expanding}
 \end{figure}
 
 \end{block}\vspace{-1.8in}
