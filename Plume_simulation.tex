@@ -67,9 +67,9 @@
 
 \title{A Numerical Simulation of Volcanic Plume Using SPH Method} % Poster title
 
-\author{Zhixuan Cao, Abani Patra} % Author(s)
+\author{Z. Cao, A. Patra, M. I. Bursik and E. B. Pitman} % Author(s)
 
-\institute{Department of Aerospace and Mechinical Engineering, University at Buffalo, SUNY} % Institution(s)
+\institute{University at Buffalo, SUNY} % Institution(s)
 
 %----------------------------------------------------------------------------------------
 
@@ -95,10 +95,10 @@
 
 \begin{alertblock}{Abstract}
 \begin{itemize}
-\item \textbf{Physics Model} Employ a three dimensional, two phases, transient model based on basic physics laws.\
-\item \textbf{Numerical Tools} SPH is suitable for geophysics flow for several reasons: 1) SPH can capture boundary of free boundary flow automatically, 2) treating of multiple phase flow is trival for SPH, 3) adding of new physics requires much less coding effort.\
-\item \textbf{Parallel Computing} timeliness and more comprehensive model and finer resolution are conflict demands for prediction capability of numerical simulation, distributed memory parallel computing is adopted.
-\item \textbf{Goal} This model is targetting at but not limited to providing source terms for VATDMs (Volcanic Ash Transport and Dispersal Models).
+\item \textbf{Physics Model} Employs a three dimensional, two phases, transient model based on basic physics laws.\
+\item \textbf{Numerical Tools} SPH is suitable for geophysical flows for several reasons: 1) SPH can capture boundary of free boundary flow automatically, 2) treating of multiple phase flow is trival for SPH, 3) adding of new physics requires much less coding effort.\
+\item \textbf{Parallel Computing} fast solution and a more comprehensive model at finer resolution are conflicting demands for prediction capability of numerical simulation, distributed memory parallel computing is adopted to help.
+\item \textbf{Goal} This model is targeting at but not limited to providing source terms for VATDMs (Volcanic Ash Transport and Dispersal Models).
 \end{itemize}
 \end{alertblock}
 
@@ -119,7 +119,7 @@ The following assumptions are made:
 \begin{itemize}
 \item Neglect molecular viscosity.
 \item Assume erupted material are well mixed and behave like a single phase fluid all the time.
-\item Assume immediate thermodynamics equilibrium and dynamics equilibrium between two phases.
+\item Assume immediate thermodynamics equilibrium and dynamic equilibrium between two phases.
 \item Ignore micro-physics process (like phase change of $H_2O$, aggregation, decomposition) and chemical reaction
 \end{itemize}.
 The governing equations are:
@@ -154,7 +154,7 @@ p = (\gamma_m - 1)\rho e \label{eq:EOS}
 \begin{figure}
 \centering
 {\includegraphics[height= 0.650\linewidth]{shocktube}}
-\caption{Solving of a 1D benchmark problem (shock tube) with SPH method, results are consistent with analytic solution}
+\caption{Solving  a 1D benchmark problem (shock tube) with SPH method, results are consistent with analytic solution}
 \label{fig:effect_of_turbulence}
 \end{figure}
 \end{block}
@@ -210,7 +210,7 @@ R_t=\sum_b m_b \dfrac{\varepsilon}{2} \dfrac{\textbf{v}_{ab} \cdot \textbf{v}_{a
 \begin{figure}
 \centering
 {\includegraphics[height= 0.690\linewidth]{jpue_conc}}
-\caption{Jet or plume which is ejected from a nozzle into a uniform environment(JPUE) can be viewed as a simplified volcanic plume. Simulation results of JPUE is compared with experimental resutls \cite{papanicolaou1988investigations, george1977turbulence} for verification purpose. Concetration distribution across the cross-section is fit into a Gaussion profile (solid line) even though there is no priori reason. D is the diameter of vent, $c_0$ is concetration at the vent.}
+\caption{Jet or plume which is ejected from a nozzle into a uniform environment(JPUE) can be viewed as a simplified volcanic plume. Simulation results of JPUE is compared with experimental resutls \cite{papanicolaou1988investigations, george1977turbulence} for verification purpose. Concentration distribution across the cross-section is fit into a Gaussian profile (solid line) even though there is no priori reason. D is the diameter of vent, $c_0$ is concetration at the vent.}
 \end{figure}
 
 \end{block}
@@ -259,7 +259,7 @@ R_t=\sum_b m_b \dfrac{\varepsilon}{2} \dfrac{\textbf{v}_{ab} \cdot \textbf{v}_{a
 \begin{figure}
 \centering
 {\includegraphics[scale=0.90]{plume_grow_up}}
-\caption{Evolution of plume with time. After around 300 seconds, the plume reaches its top height and start expanding}
+\caption{Evolution of plume with time. After around 300 seconds, the plume reaches its top height and starts expanding}
 \end{figure}
 
 \end{block}\vspace{-1.8in}
